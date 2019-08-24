@@ -1,5 +1,5 @@
 export default class Transform {
-    constructor(position, rotation, size, pivot) {
+    constructor(position, rotation, size) {
 
         if(typeof position != 'undefined') {
             this.x = position.x;

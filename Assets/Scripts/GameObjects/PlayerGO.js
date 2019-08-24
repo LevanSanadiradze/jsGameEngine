@@ -8,7 +8,6 @@ export default class GameObject {
         this.TransformSystem = new Transform();
         this.RendererSystem = new Renderer(Indexes, this.TransformSystem);
         this.BoxCollider = new BoxCollider({x: 0.5, y: 0.5}, {w: 100, h: 100}, this.TransformSystem, Indexes);
-        //this.InputHanldler = InputHandler;
         
         const Speed = 0.5;
         this.MovementSystem = new Movement(Speed, Indexes, InputHandler, this.TransformSystem, [this.BoxCollider]);

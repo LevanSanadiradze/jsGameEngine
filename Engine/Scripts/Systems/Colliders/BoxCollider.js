@@ -20,15 +20,15 @@ export default class BoxCollider {
         const rot = Transform.getRotation;
         const size = Transform.getSize;
 
-        const rotrad = rot * Math.PI / 180.0;
+        const rotrad = rot.z * Math.PI / 180.0;
 
         let lx = pos.x - this.pivot.x * size.w;
-        let by = pos.y - this.pivot.y * size.h;
+        let by = pos.y + this.pivot.y * size.h;
         lx = lx * Math.cos(rotrad) - by * Math.sin(rotrad);
         by = lx * Math.sin(rotrad) - by * Math.cos(rotrad);
 
         let rx = pos.x + this.pivot.x * size.w;
-        let uy = pos.y + this.pivot.y * size.h;
+        let uy = pos.y - this.pivot.y * size.h;
         rx = rx * Math.cos(rotrad) - uy * Math.sin(rotrad);
         uy = rx * Math.sin(rotrad) - uy * Math.cos(rotrad);
 
@@ -40,7 +40,7 @@ export default class BoxCollider {
     }
 
     doesPointIntersectCollider(point) {
-        bounds = this.calculateBounds(this.Transform);
+        const bounds = this.calculateBounds(this.Transform);
 
         return (point.x >= bounds.lx && point.x <= bounds.rx) && (point.y >= bounds.by && point.y <= bounds.uy);
     }
@@ -56,6 +56,8 @@ export default class BoxCollider {
                 points.push({x: x, y: y});
             }
         }
+
+        console.log(bounds, points);
 
         return points;
     }

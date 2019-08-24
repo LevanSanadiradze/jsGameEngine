@@ -64,6 +64,8 @@ export default class Movement {
         this.Colliders.forEach(function(collider) {
             criticalPoints = criticalPoints.concat(collider.AfterMoveCriticalPoints(transform));
         });
+
+        return criticalPoints;
     }
 
     calculateShift(dt) {

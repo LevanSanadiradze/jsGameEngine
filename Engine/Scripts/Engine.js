@@ -1,4 +1,5 @@
 import PlayerGO from '../../Assets/Scripts/GameObjects/PlayerGO.js';
+import RightSceneWall from '../../Assets/Scripts/GameObjects/Environment/SceneWalls/RightSceneWall.js';
 import InputHandler from './Systems/InputHandler.js';
 
 var Indexes = {
@@ -24,6 +25,7 @@ var GAME_STARTED = true;
 
     const GameObjects = [];
     GameObjects.push(new PlayerGO(Indexes, inputHandler));
+    GameObjects.push(new RightSceneWall(Indexes, {x: 600, y: 0}));
 
 
 
