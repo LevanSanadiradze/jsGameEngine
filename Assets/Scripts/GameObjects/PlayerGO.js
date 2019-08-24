@@ -17,37 +17,6 @@ export default class GameObject {
     }
 
     Update(dt) {
-        // const shift = {x: 0, y: 0};
         
-        // if(this.InputHanldler.keyDown('d'))
-        // {
-        //     shift.x += dt * this.Speed;
-        // }
-        // if(this.InputHanldler.keyDown('a'))
-        // {
-        //     shift.x -= dt * this.Speed;
-        // }
-        // if(this.InputHanldler.keyDown('w'))
-        // {
-        //     shift.y -= dt * this.Speed;
-        // }
-        // if(this.InputHanldler.keyDown('s'))
-        // {
-        //     shift.y += dt * this.Speed;
-        // }
-
-        // if(shift.x != 0 && shift.y != 0)
-        // {
-        //     shift.x /= Math.sqrt(2);
-        //     shift.y /= Math.sqrt(2);
-        // }
-        
-        // if(shift.x != 0 || shift.y != 0)
-        // {
-        //     const newPos = this.TransformSystem.getPosition;
-        //     newPos.x += shift.x;
-        //     newPos.y += shift.y;
-        //     this.TransformSystem.setPosition = newPos;
-        // }
     }
 }

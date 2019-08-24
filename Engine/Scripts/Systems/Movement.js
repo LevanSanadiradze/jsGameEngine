@@ -54,28 +54,6 @@ export default class Movement {
             }
         }
 
-        // Indexes.Colliders.forEach((collider) => {
-        //     let mine = false;
-
-        //     this.Colliders.forEach((myCollider) => {
-        //         if(collider == myCollider) {
-        //             mine = true;
-        //             break;
-        //         }
-        //     });
-
-        //     if(!mine) {
-        //         criticalPoints.forEach((point) => {
-        //             if(collider.doesPointIntersectCollider(point)) {
-        //                 intersected = true;
-        //                 break;
-        //             }
-        //         });
-
-        //         if(intersected) break;
-        //     }
-        // });
-
         return intersected;
     }
 
